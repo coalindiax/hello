@@ -21,10 +21,10 @@ outputs:
   - {name: InferenceService Status,   type: String,                        description: 'Status JSON output of InferenceService'}
 implementation:
   container:
-    image: abhishekdhariwal/kf:0.12
+    image: quay.io/aipipeline/kserve-component
     command: ['python']
     args: [
-      -u, kf.py,
+      -u, kfservingdeployer.py,
       --action,                 {inputValue: Action},
       --model-name,             {inputValue: Model Name},
       --model-uri,              {inputValue: Model URI},
