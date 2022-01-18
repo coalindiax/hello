@@ -21,7 +21,7 @@ outputs:
   - {name: InferenceService Status,   type: String,                        description: 'Status JSON output of InferenceService'}
 implementation:
   container:
-    image: abhishekdhariwal/kf:0.1
+    image: abhishekdhariwal/kf:0.12
     command: ['python']
     args: [
       -u, kf.py,
